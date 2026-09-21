@@ -1,0 +1,4 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav');
+menu?.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex';nav.style.position='absolute';nav.style.top='65px';nav.style.left='0';nav.style.right='0';nav.style.padding='20px';nav.style.background='#fff';nav.style.flexDirection='column'});
+document.querySelectorAll('[data-photo]').forEach(el=>{const f='assets/photos/'+el.dataset.photo;const i=new Image();i.onload=()=>{el.style.backgroundImage=`url("${f}")`;const s=el.querySelector(':scope > span');if(s)s.style.display='none'};i.src=f});
